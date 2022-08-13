@@ -16,15 +16,30 @@
     document.querySelector('body').style.color='#F4D03F';
    ">
     <input id="night_day" type="button" value="night" onclick="
+    var target = document.querySelector('body');
     if(document.querySelector('#night_day').value === 'night'){
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';
+    target.style.backgroundColor='black';
+    target.style.color='white';
     document.querySelector('#night_day').value = 'day';
     } else{
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
+    target.style.backgroundColor='white';
+    target.style.color='black';
     document.querySelector('#night_day').value = 'night';}
     ">
     <h1>Lorem ipsum</h1>
+    <p>
+        Figure skating is a sport in which individuals, pairs, or groups perform on figure skates on ice. It was the first winter sport to be included in the Olympic Games, when contested at the 1908 Olympics in London.[1] The Olympic disciplines are men's singles, women's singles[note 1], pair skating, and ice dance; the four individual disciplines are also combined into a team event, first included in the Winter Olympics in 2014. The non-Olympic disciplines include synchronized skating, Theater on Ice, and four skating. From intermediate through senior-level competition, skaters generally perform two programs (the short program and the free skate), which, depending on the discipline, may include spins, jumps, moves in the field, lifts, throw jumps, death spirals, and other elements or moves.
+    </p>
+    <input type="button" value="night" onclick="
+    if(this.value === 'night'){
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    this.value = 'day';
+    } else{
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    this.value = 'night';}
+    ">
+
 </body>
 </html>
