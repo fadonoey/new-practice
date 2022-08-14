@@ -8,13 +8,19 @@
 </head>
 <body>
     <h1>Loop&Array</h1>
-    <h2>Co workers</h2>
+    <script>
+        var skaters = ['Yuna Kim', 'Minchae Kim', 'Jia shin', 'Ahsun Yun', 'Rika Kihira'];
+    </script>
+    <h2>Skaters</h2>
     <ul>
-        <li>Yuna Kim</li>
-        <li>Minchae Kim</li>
-        <li>Jia Shin</li>
-        <li>Ahsun Yun</li>
-        <li>Rika Kihira</li>
+        <script>
+            var i = 0;
+            while(i<skaters.length){
+                document.write('<li>'+skaters[i]+'</li>');
+                i = i + 1;
+            }
+            
+        </script>
     </ul>
 </body>
 </html>
