@@ -5,6 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+     function nightDayHandler(self){
+            if(self.value === 'night'){
+            document.querySelector('body').style.backgroundColor='black';
+            document.querySelector('body').style.color='white';
+            self.value = 'day';
+            var alist = document.querySelectorAll('a');
+            var i=0;
+            while(i<alist.length){
+            console.log(alist[i])
+            alist[i].style.color='powderblue'
+            i=i+1;}
+            } else{
+            document.querySelector('body').style.backgroundColor='white';
+            document.querySelector('body').style.color='black';
+            self.value = 'night';
+            var alist = document.querySelectorAll('a');
+            var i=0;
+            while(i<alist.length){
+            console.log(alist[i])
+            alist[i].style.color='blue'
+            i=i+1;}
+            }
+        }
+
+    </script>
 </head>
 <body>
     <a href="https://en.wikipedia.org/wiki/Figure_skating"><h1>Figure Skating</h1></a>
@@ -22,27 +48,7 @@
     document.querySelector('body').style.color='#F4D03F';
    ">
     <input type="button" value="night" onclick="
-    if(this.value === 'night'){
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';
-    this.value = 'day';
-    var alist = document.querySelectorAll('a');
-    var i=0;
-    while(i<alist.length){
-    console.log(alist[i])
-    alist[i].style.color='powderblue'
-    i=i+1;}
-    } else{
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
-    this.value = 'night';
-    var alist = document.querySelectorAll('a');
-    var i=0;
-    while(i<alist.length){
-    console.log(alist[i])
-    alist[i].style.color='blue'
-    i=i+1;}
-    }
+    nightDayHandler(this);
     ">
     <h1>Lorem ipsum</h1>
     <p>
