@@ -38,8 +38,14 @@
     <h2>Property & Method</h2>
     <script>
         gpSeries.showAll = function(){
-            for(var key in gpSeries) { 
-            document.write(key+": "+gpSeries[key]+"<br>");
+            for(var key in this) { 
+                if(key == "showAll"){
+                    document.write();
+                }
+                else{
+                    document.write(key+": "+this[key]+"<br>");
+                }
+            
             }
         }
         gpSeries.showAll();
