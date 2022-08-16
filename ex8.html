@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var gpSeries = {
+            "GP1":"Skate America",
+            "GP2":"Skate Canada",
+            "GP3":"GP de France",
+            "GP4":"GP MK John Wilson Trophy",
+            "GP5":"GP NHK Trophy",
+        };
+        document.write("그랑프리 1차: "+gpSeries.GP1+"<br>");
+        document.write("그랑프리 2차: "+gpSeries.GP2+"<br>");
+        gpSeries.GP6 = "GP Espoo"; //객체에 추가함
+        document.write("그랑프리 6차: "+gpSeries.GP6+"<br>");
+        gpSeries["GP Final"] = "TBD";
+        document.write("그랑프리 파이널: "+gpSeries["GP Final"]+"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+        document.write("내용도 출력 <br>");
+        for(var key in gpSeries) { 
+            document.write(key+": "+gpSeries[key]+"<br>");
+        }
+        document.write("<br>Key만 출력<br>");
+        for(var key in gpSeries) {
+            document.write(key+"<br>");
+        }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+        gpSeries.showAll = function(){
+            for(var key in gpSeries) { 
+            document.write(key+": "+gpSeries[key]+"<br>");
+            }
+        }
+        gpSeries.showAll();
+    </script>
+</body>
+</html>
