@@ -1,0 +1,1 @@
+var skaterArray = ['sueun','chaeeun','juyeon','haeun'];
