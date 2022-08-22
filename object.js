@@ -10,3 +10,5 @@ var skaterObject = {
 skaterObject.Korea = 'Yuna'
 console.log('skaterObject.USA', skaterObject.USA);
 console.log(skaterObject.Korea);
+delete skaterObject.Korea;
+console.log(skaterObject.Korea);
