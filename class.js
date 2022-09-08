@@ -5,17 +5,28 @@ class Person{
         this.second = second;
         
     }
+    sum(){
+        return this.first+this.second;
+    }
 }
 
 class PersonPlus extends Person{
+    constructor(name, first, second, third){
+        super(name, first, second)
+        this.third = third;
+    }
+    sum(){
+        return super.sum() + this.third;
+    }
     avg(){
         return (this.first+this.second)/2;
     }
 }
 
-var kim = new PersonPlus('kim', 20, 30);
+var kim = new PersonPlus('kim', 10, 20, 30);
 
 console.log('kim', kim);
+console.log('kim sum', kim.sum());
 console.log('kim avg', kim.avg());
 // kim.sum = function(){
 //     return 'kim: '+(this.first+this.second);
