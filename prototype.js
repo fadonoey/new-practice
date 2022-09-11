@@ -14,4 +14,4 @@ kim.sum = function(){
 var seoyeon = new Person('Seoyeon', 100, 100, 100);
 console.log('kim', kim.sum());
 console.log('Seoyeon', seoyeon.sum());
-console.log('Seoyeon all', seoyeon);
+// console.log('Seoyeon all', seoyeon);
